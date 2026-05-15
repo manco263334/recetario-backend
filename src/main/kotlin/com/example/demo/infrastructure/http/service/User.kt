@@ -3,8 +3,8 @@ package com.example.demo.infrastructure.http.service
 import com.example.demo.application.use_cases.user.UpdateUser
 import com.example.demo.application.use_cases.user.UpdateUserRequest
 import com.example.demo.infrastructure.dto.UserDTO
-import com.example.demo.infrastructure.http.utils.mapper.isNullOrFalse
-import com.example.demo.infrastructure.http.utils.mapper.toDTO
+import com.example.demo.core.utils.extension.isNullOrFalse
+import com.example.demo.core.utils.mapper.toDTO
 import com.example.demo.infrastructure.repository.UserRepository
 import org.springframework.cache.annotation.CacheEvict
 import org.springframework.cache.annotation.Cacheable

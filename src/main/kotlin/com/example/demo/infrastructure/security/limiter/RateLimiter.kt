@@ -28,12 +28,12 @@ class RateLimitingFilter : OncePerRequestFilter() {
         filterChain: FilterChain
     ) {
         val key = request.remoteAddr
-//        val url = request.requestURL.toString()
-//        val skippedEndpoints = arrayOf("logout")
-//
-//        if (skippedEndpoints.any { url.contains(it) }) {
-//            return filterChain.doFilter(request, response)
-//        }
+        val url = request.requestURL.toString()
+        val skippedEndpoints = arrayOf("logout")
+
+        if (skippedEndpoints.any { url.contains(it) }) {
+            return filterChain.doFilter(request, response)
+        }
 
         val userBucket = buckets.computeIfAbsent(key) { createNewBucket() }
 

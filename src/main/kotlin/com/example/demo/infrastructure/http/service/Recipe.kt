@@ -6,8 +6,8 @@ import com.example.demo.application.use_cases.recipe.UpdateRecipe
 import com.example.demo.application.use_cases.recipe.UpdateRecipeRequest
 import com.example.demo.domain.entities.UserEntity
 import com.example.demo.infrastructure.dto.RecipeDTO
-import com.example.demo.infrastructure.http.utils.mapper.isNullOrFalse
-import com.example.demo.infrastructure.http.utils.mapper.toDTO
+import com.example.demo.core.utils.extension.isNullOrFalse
+import com.example.demo.core.utils.mapper.toDTO
 import com.example.demo.infrastructure.repository.RecipeRepository
 import org.springframework.cache.annotation.CacheEvict
 import org.springframework.cache.annotation.Cacheable

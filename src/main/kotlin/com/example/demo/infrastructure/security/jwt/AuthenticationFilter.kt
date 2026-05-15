@@ -49,10 +49,10 @@ class JWTAuthenticationFilter (
 
         return authHeader?.let {
             if (it.startsWith(BEARER)) {
-                return it.substring(BEARER.length)
+                it.substring(BEARER.length)
+            } else{
+                null
             }
-
-            null
         }
     }
 

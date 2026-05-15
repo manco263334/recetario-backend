@@ -3,9 +3,7 @@ package com.example.demo.application.use_cases.recipe
 import com.example.demo.domain.entities.RecipeEntity
 import com.example.demo.domain.entities.UserEntity
 import com.example.demo.infrastructure.dto.RecipeDTO
-import com.example.demo.infrastructure.http.utils.mapper.toDTO
-import com.example.demo.infrastructure.http.utils.mapper.toEntity
-import com.example.demo.infrastructure.http.utils.mapper.toMap
+import com.example.demo.core.utils.mapper.toDTO
 import com.example.demo.infrastructure.repository.CategoryRepository
 import com.example.demo.infrastructure.repository.RecipeRepository
 import org.springframework.stereotype.Service

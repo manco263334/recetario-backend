@@ -3,7 +3,7 @@ package com.example.demo.infrastructure.http.controller
 import com.example.demo.domain.entities.UserEntity
 import com.example.demo.infrastructure.http.service.AuthService
 import com.example.demo.infrastructure.http.service.LoginRequest
-import com.example.demo.infrastructure.http.utils.mapper.toModel
+import com.example.demo.core.utils.mapper.toModel
 import jakarta.servlet.http.Cookie
 import jakarta.servlet.http.HttpServletResponse
 import org.springframework.http.ResponseEntity

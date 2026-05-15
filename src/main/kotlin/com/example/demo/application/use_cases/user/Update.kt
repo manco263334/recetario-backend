@@ -1,8 +1,8 @@
 package com.example.demo.application.use_cases.user
 
 import com.example.demo.infrastructure.dto.UserDTO
-import com.example.demo.infrastructure.http.utils.mapper.isNeitherNullNorBlank
-import com.example.demo.infrastructure.http.utils.mapper.toDTO
+import com.example.demo.core.utils.extension.isNeitherNullNorBlank
+import com.example.demo.core.utils.mapper.toDTO
 import com.example.demo.infrastructure.repository.UserRepository
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional

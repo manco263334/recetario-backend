@@ -1,11 +1,10 @@
-package com.example.demo.infrastructure.http.utils.mapper
+package com.example.demo.core.utils.mapper
 
 import com.example.demo.domain.entities.RecipeEntity
 import com.example.demo.domain.entities.UserEntity
 import com.example.demo.domain.models.RecipeModel
 import com.example.demo.domain.value_objects.Ingredient
 import com.example.demo.infrastructure.dto.RecipeDTO
-import kotlin.contracts.contract
 
 fun Ingredient.toMap(): Map<String, String> {
     return mapOf (

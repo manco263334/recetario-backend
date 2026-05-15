@@ -1,4 +1,4 @@
-package com.example.demo.infrastructure.http.utils.mapper
+package com.example.demo.core.utils.extension
 
 import kotlin.contracts.ExperimentalContracts
 import kotlin.contracts.contract

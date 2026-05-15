@@ -1,8 +1,8 @@
 package com.example.demo.application.use_cases.category
 
 import com.example.demo.infrastructure.dto.CategoryDTO
-import com.example.demo.infrastructure.http.utils.mapper.isNeitherNullNorBlank
-import com.example.demo.infrastructure.http.utils.mapper.toDTO
+import com.example.demo.core.utils.extension.isNeitherNullNorBlank
+import com.example.demo.core.utils.mapper.toDTO
 import com.example.demo.infrastructure.repository.CategoryRepository
 import jakarta.transaction.Transactional
 import org.springframework.stereotype.Service

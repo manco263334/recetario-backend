@@ -4,8 +4,8 @@ import com.example.demo.application.use_cases.user.CreateUser
 import com.example.demo.domain.models.UserModel
 import com.example.demo.infrastructure.http.controller.AuthResponse
 import com.example.demo.infrastructure.http.controller.MeResponse
-import com.example.demo.infrastructure.http.utils.mapper.toEntity
-import com.example.demo.infrastructure.http.utils.mapper.toModel
+import com.example.demo.core.utils.mapper.toEntity
+import com.example.demo.core.utils.mapper.toModel
 import com.example.demo.infrastructure.repository.UserRepository
 import org.springframework.cache.annotation.CacheEvict
 import org.springframework.cache.annotation.Cacheable

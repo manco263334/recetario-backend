@@ -5,13 +5,11 @@ import com.example.demo.application.use_cases.recipe.UpdateRecipeRequest
 import com.example.demo.domain.models.UserModel
 import com.example.demo.infrastructure.dto.RecipeDTO
 import com.example.demo.infrastructure.http.service.RecipeService
-import com.example.demo.infrastructure.http.utils.mapper.toEntity
+import com.example.demo.core.utils.mapper.toEntity
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.PageRequest
-import org.springframework.data.domain.Pageable
 import org.springframework.http.ResponseEntity
 import org.springframework.security.access.prepost.PreAuthorize
-import org.springframework.security.access.prepost.PreFilter
 import org.springframework.security.core.context.SecurityContextHolder
 import org.springframework.web.bind.annotation.DeleteMapping
 import org.springframework.web.bind.annotation.GetMapping

@@ -1,6 +1,6 @@
 package com.example.demo.infrastructure.security.config
 
-import com.example.demo.infrastructure.http.utils.mapper.toModel
+import com.example.demo.core.utils.mapper.toModel
 import com.example.demo.infrastructure.repository.UserRepository
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration

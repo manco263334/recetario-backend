@@ -1,4 +1,4 @@
-package com.example.demo.infrastructure.http.utils.mapper
+package com.example.demo.core.utils.mapper
 
 import com.example.demo.domain.entities.UserEntity
 import com.example.demo.domain.models.UserModel

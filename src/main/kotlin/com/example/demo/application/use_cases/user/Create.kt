@@ -3,7 +3,7 @@ package com.example.demo.application.use_cases.user
 import com.example.demo.domain.entities.UserEntity
 import com.example.demo.domain.value_objects.Email
 import com.example.demo.infrastructure.dto.UserDTO
-import com.example.demo.infrastructure.http.utils.mapper.toDTO
+import com.example.demo.core.utils.mapper.toDTO
 import com.example.demo.infrastructure.repository.UserRepository
 import org.springframework.stereotype.Service
 
