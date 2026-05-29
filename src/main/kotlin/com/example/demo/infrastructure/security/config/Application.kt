@@ -18,7 +18,6 @@ import org.springframework.security.crypto.password.PasswordEncoder
 class ApplicationConfig (
     private final val userRepository: UserRepository
 ) {
-
     @Bean
     fun authenticationManager(config: AuthenticationConfiguration): AuthenticationManager {
         return config.authenticationManager
@@ -28,6 +27,7 @@ class ApplicationConfig (
     fun authenticationProvider(): AuthenticationProvider {
         val authenticationProvider = DaoAuthenticationProvider(userDetailsService())
         authenticationProvider.setPasswordEncoder(passwordEncoder())
+
         return authenticationProvider
     }
 

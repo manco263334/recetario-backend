@@ -24,7 +24,10 @@ class JWTAuthenticationFilter (
         response: HttpServletResponse,
         filterChain: FilterChain
     ) {
-        val token: String = getTokenFromRequest(request) ?: return filterChain.doFilter(request, response)
+        val tokenFromRequest = getTokenFromRequest(request)
+        val tokenFromCookie = getTokenFromCookie(request)
+
+        val token = tokenFromCookie ?: tokenFromRequest ?: return filterChain.doFilter(request, response)
 
         val username = jwtService.getUsernameFromToken(token)
 
@@ -57,6 +60,6 @@ class JWTAuthenticationFilter (
     }
 
     private fun getTokenFromCookie(request: HttpServletRequest): String? {
-            return request.cookies?.find { it.name == AUTH_TOKEN }?.value
+        return request.cookies?.find { it.name == AUTH_TOKEN }?.value
     }
 }

@@ -29,7 +29,7 @@ class RateLimitingFilter : OncePerRequestFilter() {
     ) {
         val key = request.remoteAddr
         val url = request.requestURL.toString()
-        val skippedEndpoints = arrayOf("logout")
+        val skippedEndpoints = arrayOf("auth")
 
         if (skippedEndpoints.any { url.contains(it) }) {
             return filterChain.doFilter(request, response)
@@ -42,7 +42,7 @@ class RateLimitingFilter : OncePerRequestFilter() {
         } else {
             response.status = HttpStatus.TOO_MANY_REQUESTS.value()
             response.contentType = "application/json"
-            response.writer.write("""{
+            response.writer.write ("""{
                 "error": "Too Many Requests",
                 "message": "Cálmate pibe, vas muy rápido. Intenta de nuevo en un minuto."
             }""")

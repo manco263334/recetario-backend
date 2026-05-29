@@ -71,7 +71,7 @@ class AuthController (
     }
 
     @PostMapping("/logout")
-    fun logout () {
+    fun logout() {
         Cookie(AUTH_TOKEN, null).apply {
             isHttpOnly = true
             maxAge = 0
@@ -81,7 +81,7 @@ class AuthController (
 
     @GetMapping("/me")
     @PreAuthorize("authentication?.principal != 'anonymousUser'")
-    fun me (): ResponseEntity<MeResponse> {
+    fun me(): ResponseEntity<MeResponse> {
         val response = service.me()
 
         return ResponseEntity.ok(response)
